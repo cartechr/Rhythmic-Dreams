@@ -1,0 +1,68 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Scripts/Character.gd" type="Script" id=1]
+[ext_resource path="res://Assets/left1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/left2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/left3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/left4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/right1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/right2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/right3.png" type="Texture" id=8]
+[ext_resource path="res://Assets/right4.png" type="Texture" id=9]
+[ext_resource path="res://Assets/up1.png" type="Texture" id=10]
+[ext_resource path="res://Assets/up2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/up3.png" type="Texture" id=12]
+[ext_resource path="res://Assets/up4.png" type="Texture" id=13]
+[ext_resource path="res://Assets/New-Piskel-_12_.png" type="Texture" id=14]
+[ext_resource path="res://Assets/down1.png" type="Texture" id=15]
+[ext_resource path="res://Assets/down2.png" type="Texture" id=16]
+[ext_resource path="res://Assets/down3.png" type="Texture" id=17]
+[ext_resource path="res://Assets/down4.png" type="Texture" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": false,
+"name": "notmoving",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 25.4202, 49.1869 )
+
+[node name="Character" type="KinematicBody2D"]
+position = Vector2( 41.9168, 298.482 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 510.337, 88.4466 )
+scale = Vector2( 0.457846, 0.457962 )
+frames = SubResource( 1 )
+animation = "up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 511.236, 87.8425 )
+shape = SubResource( 2 )
