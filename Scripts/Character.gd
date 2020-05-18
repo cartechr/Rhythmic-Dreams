@@ -23,3 +23,4 @@ func _physics_process(delta):
 		velocity.y = 0
 		$AnimatedSprite.play("notmoving")
 	velocity = move_and_slide(velocity)
+	

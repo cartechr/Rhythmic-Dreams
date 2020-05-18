@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/PauseScreen.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 0.25098 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 391.975
+margin_top = 191.017
+margin_right = 582.975
+margin_bottom = 264.017
+text = "Resume"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 393.142
+margin_top = 312.318
+margin_right = 584.142
+margin_bottom = 385.318
+text = "Quit"
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
