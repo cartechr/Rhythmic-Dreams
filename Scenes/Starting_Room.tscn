@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/PauseScreen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Inventory.tscn" type="PackedScene" id=3]
 
 [node name="Starting_Room" type="Node2D"]
 
@@ -16,3 +17,5 @@ visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 0.164642, -0.0566254, -0.01402, 600.066, -10.0223, 600.024, -10.0702, -10.1538, 1029.98, -9.94548, 1030.06, 610.155, -0.179153, 599.895, 1024.99, 599.94, 1024.11, -0.0971184 )
+
+[node name="Inventory" parent="." instance=ExtResource( 3 )]
