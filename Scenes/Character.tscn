@@ -48,21 +48,21 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 25.4202, 49.1869 )
+extents = Vector2( 12.114, 23.1086 )
 
 [node name="Character" type="KinematicBody2D"]
-position = Vector2( 41.9168, 298.482 )
+position = Vector2( 41.6395, 298.482 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 510.337, 88.4466 )
-scale = Vector2( 0.457846, 0.457962 )
+position = Vector2( 504.921, 72.613 )
+scale = Vector2( 0.218677, 0.218733 )
 frames = SubResource( 1 )
 animation = "up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 511.236, 87.8425 )
+position = Vector2( 504.657, 72.5339 )
 shape = SubResource( 2 )
