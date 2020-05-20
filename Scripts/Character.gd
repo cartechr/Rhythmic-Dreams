@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 250
+const SPEED = 100
 const FLOOR = Vector2(0, -1)
 var velocity = Vector2()
 
